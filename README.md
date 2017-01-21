@@ -13,3 +13,6 @@ software used
 packaged as war file to be deployed on Tomact 8+
 
 testing http://localhost:8080/areacode/list
+
+
+note: make sure all table names are declared in lower case in postgreSQL
