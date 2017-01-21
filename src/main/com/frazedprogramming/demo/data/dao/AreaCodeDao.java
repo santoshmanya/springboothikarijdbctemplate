@@ -28,7 +28,7 @@ public class AreaCodeDao {
     public int save(AreaCode areaCode) {
 
         try {
-            String insertSQL = "INSERT INTO public.US_States_Area_codes(\n" +
+            String insertSQL = "INSERT INTO us_states_area_codes(\n" +
                     "\tarea_code, state_code, city_name)\n" +
                     "\tVALUES (?, ?, ?)";
 
@@ -60,7 +60,7 @@ public class AreaCodeDao {
     public int update(AreaCode areaCode) {
 
         try {
-            String updateSQL = "UPDATE public.US_States_Area_codes\n" +
+            String updateSQL = "UPDATE us_states_area_codes\n" +
                     "\tSET state_code=?, city_name=?\n" +
                     "\tWHERE area_code=?";
             // define query arguments
@@ -92,7 +92,7 @@ public class AreaCodeDao {
     public int delete(int id) {
 
         try {
-            String deteleSQL = "DELETE FROM public.US_States_Area_codes WHERE area_code=?";
+            String deteleSQL = "DELETE FROM us_states_area_codes WHERE area_code=?";
             Object[] params = new Object[]{id};
             int[] types = new int[]{Types.INTEGER};
 
@@ -110,7 +110,7 @@ public class AreaCodeDao {
     public List findAll() {
 
         try {
-            String SQL = "select * from public.US_States_Area_codes";
+            String SQL = "select * from us_states_area_codes";
             List<AreaCode> retval = jdbcTemplate.query(SQL, new AreaCodeMapper());
 
             return retval;
@@ -124,7 +124,7 @@ public class AreaCodeDao {
     public int count() {
 
         try {
-            String SQL = "select count(*) from public.US_States_Area_codes ";
+            String SQL = "select count(*) from us_states_area_codes ";
             int retVal = jdbcTemplate.queryForObject(SQL, Integer.class);
 
             return retVal;
@@ -137,7 +137,7 @@ public class AreaCodeDao {
 
     public AreaCode findOne(int areaCode) {
         try {
-            String SQL = "select area_code, state_code, city_name from public.US_States_Area_codes WHERE area_code=?";
+            String SQL = "select area_code, state_code, city_name from us_states_area_codes WHERE area_code=?";
             Object[] params = new Object[]{areaCode};
             int[] types = new int[]{Types.INTEGER};
             List<AreaCode> retVal = jdbcTemplate.query(SQL, params, types, new AreaCodeMapper());

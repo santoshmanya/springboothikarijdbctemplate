@@ -1,0 +1,18 @@
+-- Table: public.us_states_area_codes
+
+-- DROP TABLE public.us_states_area_codes;
+
+CREATE TABLE public.us_states_area_codes
+(
+    area_code integer NOT NULL,
+    state_code character varying(2) COLLATE pg_catalog."default" NOT NULL,
+    city_name character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "US_States_Area_codes_pkey" PRIMARY KEY (area_code)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.us_states_area_codes
+    OWNER to postgres;
