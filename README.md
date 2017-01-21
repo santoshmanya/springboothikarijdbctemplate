@@ -10,4 +10,4 @@ software used
 4. springjdbc template
 
 
-packaged was war file to be deployed on Tomact 8+
+packaged as war file to be deployed on Tomact 8+
