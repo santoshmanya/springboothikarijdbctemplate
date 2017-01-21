@@ -4,7 +4,7 @@
 software used
 
 
-springboot
-hikari datasource
-postgreSQL
-springjdbc template
+1. springboot
+2. hikari datasource
+3. postgreSQL
+4. springjdbc template
