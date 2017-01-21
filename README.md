@@ -1,6 +1,6 @@
 # springboothikarijdbctemplate
 
-(https://travis-ci.org/santoshmanya/springboothikarijdbctemplate.svg?branch=master)
+<img src="https://travis-ci.org/santoshmanya/springboothikarijdbctemplate.svg?branch=master" alt="build:passed">
 
 software used
 
